@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1 id="birthday-message"></h1>
+        <audio id="birthday-audio" src="music.mp3" preload="auto" loop></audio>
+        <button id="start-btn">Klik Coba</button>
+        <div class="cake-container">
+            <a href="letter.html">
+                <img id="birthday-cake" src="cake.jpeg" alt="Kue Ulang Tahun" style="display:none; opacity: 0;" />
+            </a>
+            <a href="letter.html">
+                <button id="cake-button">See Letter or you can do it by clicking on the image</button>
+            </a>
+        </div>
+        <div class="balloons">
+            <!-- Tambah banyak balon -->
+            <div class="balloon one">🌑</div>
+            <div class="balloon two">🌛</div>
+            <div class="balloon three">🌚</div>
+            <div class="balloon four">🪐</div>
+            <div class="balloon five">⭐</div>
+            <div class="balloon six">☀️</div>
+            <div class="balloon seven">☁️</div>
+            <div class="balloon eight">🌝</div>
+            <div class="balloon nine">✨</div>
+            <div class="balloon ten">🌠</div>
+            <div class="balloon elevent">🌏</div>
+            <div class="balloon twelve">☘️</div>
+            <div class="balloon thirteen">❤️</div>
+            <div class="balloon forteen">🌙</div>
+            <div class="balloon fiveteen">🐬</div>
+            <div class="balloon sixteen">🌉</div>
+            <div class="balloon seventeen">🎂</div>
+        </div>
+        <div class="hover-message" id="hover-message">Yummy Cake!</div>
+    </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

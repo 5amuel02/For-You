@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to bottom, #0e1a4a, #2c3e50, #34495e);
+
+    overflow: hidden;
+}
+.stars {
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: twinkle 5s infinite ease-in-out;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex; /* Menambahkan flexbox */
+    flex-direction: column; /* Mengatur arah kolom */
+    align-items: center;
+}
+#birthday-cake {
+    width: 300px;
+    height: 300px; /* Atur lebar gambar sesuai kebutuhan */
+    margin-top: 20px; /* Jarak antara teks dan gambar */
+    opacity: 0; /* Memastikan gambar dimulai dengan opacity 0 */
+    transition: opacity 1s ease-in-out; /* Untuk efek fade in */
+    display: none; /* Awalnya tidak ditampilkan */
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    word-break: break-word; /* Agar teks tetap dalam layar */
+    overflow-wrap: break-word;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    z-index: 2; /* Menyatakan tombol ada di depan */
+    position: relative;
+}
+
+.balloons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 0;
+}
+
+.balloon {
+    width: 50px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100vh);
+    align-content: center;
+}
+.hover-message {
+    position: absolute;
+    display: none; /* Awalnya disembunyikan */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #333;
+    z-index: 100;
+}
+#cake-button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Jarak antara gambar dan tombol */
+    z-index: 1; /* Menyatakan tombol ada di depan */
+    position: relative;
+    width: 200px;
+}
+
+.balloon:before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background-color: white;
+}
+
+.one { background-color: #ff5e5b; }
+.two { background-color: #ffb400; }
+.three { background-color: #82c9e0; }
+.four { background-color: #7ed56f; }
+.five { background-color: #ff7f50; }
+.six { background-color: #ff6347; }
+.seven { background-color: #87ceeb; }
+.eight { background-color: #ff69b4; }
+.nine {background-color: #ab1a62;}
+.ten {background-color: brown;}
+.elevent{background-color: maroon;}
+.twelve{background-color: darkgoldenrod;}
+.thirteen{background-color: #996c03;}
+.forteen{background-color: crimson;}
+.fiveteen{background-color: cyan;}
+.sixteen{background-color: violet;}
+.seventeen{background-color: yellow;}
+
+@media only screen and (max-width: 560px) {
+    h1 {
+        font-size: 1rem; /* Ukuran teks lebih kecil lagi */ /* Kurangi jarak antar elemen */
+        line-height: 1.2;
+        margin-top: 0px;
+        transform: scale(0.5);
+        width: 500px;
+        text-align: center; /* Sesuaikan jarak antar baris */
+    }
+
+    .balloons {
+        gap: 5px; /* Kurangi jarak antara balon agar lebih muat */
+    }
+    .seven { display: none; }
+    .eight { display: none; }
+    .nine {display: none;}
+    .ten {display: none;}
+    .elevent{display: none;}
+    .twelve{display: none;}
+    .thirteen{display: none;}
+    .forteen{display: none;}
+    .fiveteen{display: none;}
+    .sixteen{display: none;}
+    .seventeen{display: none;}
+
+    .balloon {
+        width: 30px; /* Perkecil ukuran balon */
+        height: 50px;
+    }
+    #birthday-cake img{
+        width: 20px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    h1 {
+        font-size: 5rem; /* Sesuaikan ukuran teks lebih kecil */
+        margin-bottom: -50px; 
+    }
+    
+    button {
+        padding: 9px 18px;
+        font-size: 1rem;
+    }
+    
+    .balloon {
+        width: 45px;
+        height: 70px;
+    }
+    
+    #birthday-cake {
+        margin-top: -40px;
+    }
+}
+
+/* Tampilan besar, max-width 1024px */
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .balloon {
+        width: 50px;
+        height: 80px;
+    }
+    
+    #birthday-cake {
+        width: 300px;
+        height: 300px;
+    }
+}

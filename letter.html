@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surat Animasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="letter.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="envelope-container">
+    <audio id="birthday-audio" src="music.mp3" preload="auto" loop></audio>
+    <div class="envelope">
+      <div class="flap"></div>
+      <div class="letter">
+        <strong>Happy Birthday Glo</strong><br><br>
+        May your days be full of happiness, health and love.<br>
+        From the people closest to you😊
+        <a href="index.html">
+          <button class="circle-button" onclick="toggleEnvelope()">◀️</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button class="toggle-button" onclick="toggleEnvelope()">Open/Close Letter</button>
+
+  <script>
+    const birthdayAudio = document.getElementById('birthday-audio');
+
+    // Memutar audio saat halaman dimuat
+    window.onload = function() {
+      birthdayAudio.play().catch(error => {
+        console.log("Audio playback was prevented: ", error);
+      });
+    };
+    function toggleEnvelope() {
+      const envelope = document.querySelector('.envelope');
+      const flap = document.querySelector('.flap');
+      envelope.classList.toggle('open');
+      flap.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
